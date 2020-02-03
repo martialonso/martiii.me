@@ -1,0 +1,32 @@
+.raindrops {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+    
+    background: #EEE
+}
+
+.drop {
+    animation: drop 1s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.trace {
+    width: 1px;
+    height: 50px;
+    background: #AAA;
+  
+    margin-left: 100px;
+}
