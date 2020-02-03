@@ -2,11 +2,14 @@ var rain = function() {
     var i = 0;
     var drops = "";
     console.log("Raining...");
-    while (i < 33) {
+    while (i < 100) {
         i++;
-        drops += '<div class="drop" style="left: ' + (i * 3) + '%;">'
-        + '<div class="trace"></div>'
-        + '<div class="splash"></div>'
+        var l = Math.random() * 100;
+        var t = Math.random() * 50 + 10;
+        var ad = 5 +  i/10 + Math.random();
+        drops += '<div class="drop" style="left: ' + l + '%; top: -' + t + '%; animation-delay: ' + ad + 's;">'
+        + '<div class="trace" style="animation-delay: ' + ad + 's;"></div>'
+        + '<div class="splash" style="animation-delay: ' + ad + 's;"></div>'
         + '</div>';
         
         console.log("Addind drop...");
