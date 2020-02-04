@@ -11,10 +11,27 @@ var rain = function() {
         + '<div class="trace" style="animation-delay: ' + ad + 's;"></div>'
         + '<div class="splash" style="animation-delay: ' + ad + 's;"></div>'
         + '</div>';
-        
-        console.log("Addind drop...");
     }
     $(".raindrops").append(drops);
 }
+var Audio;
+var muted = true;
 
-$(document).ready(rain);
+window.onload = function() {
+  audio = new Audio('raindrops.mp3');
+}
+
+$(document).ready(function() {
+    $('.sound').on('click', function() {
+        if (muted) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+        muted = !muted;
+        $('.sound-i').toggleClass('fa-volume-mute');
+        $('.sound-i').toggleClass('fa-volume-up');
+    });
+    rain();
+});
+
