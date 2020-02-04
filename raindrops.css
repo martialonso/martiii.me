@@ -10,7 +10,7 @@
 
 .drop {
     position: absolute;
-    animation: drop 0.8s linear infinite;
+    animation: drop 0.7s linear infinite;
 }
 
 @keyframes drop {
@@ -30,7 +30,7 @@
     height: 50px;
     background: linear-gradient(to bottom, #FFF , #AAA);
     margin-left: 7px;
-    animation: trace 0.8s linear infinite;
+    animation: trace 0.7s linear infinite;
 }
 
 @keyframes trace {
@@ -59,7 +59,7 @@
     border-radius: 50%;
     opacity: 0;
     margin-top: 5px;
-    animation: splash 0.8s linear infinite;
+    animation: splash 0.7s linear infinite;
 }
 
 @keyframes splash {
@@ -78,5 +78,31 @@
     100% {
         opacity: 0;
         transform: scale(1.5);
+    }
+}
+
+.sound {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    animation: sound 6s linear;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+.sound:focus {
+    outline: none;
+}
+
+@keyframes sound {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
