@@ -19,7 +19,7 @@ var muted = true;
 
 window.onload = function() {
   audio = new Audio('raindrops.mp3');
-  audio.volume = 0.3;
+  audio.volume = 0.15;
 }
 
 $(document).ready(function() {
